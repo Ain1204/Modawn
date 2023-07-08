@@ -1,0 +1,71 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    border-bottom: 2px solid lightgray;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 20px;
+}
+
+.nav-bar {
+    display: flex;
+}
+
+.logo {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    width: 30vh;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-bar {
+    width: 40vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+form {
+    display: flex;
+    margin-left: -10px;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 1px gray;
+    height: 25px;
+    align-items: center;
+}
+
+i {
+    position: absolute;
+    margin-left: 145px;
+    margin-top: 7px;
+    color: darkgray;
+}
+
+/*메인 페이지, 토론 메인 페이지 만들어오기
+구현 할 기능 : 메인 페이지에 서 토론 박스에 마우스 올리면 파란색으로 표시
+버튼 누르면 토론 메인 페이지로 이동
+헤더 부분에서는 로고 누르면 다시 메인 페이지로 이동
+검색 기능? 보류
+로그인, 회원가입 누르면 로그인 페이지로 이동
+작성자와 참여자에게 다른 페이지 노출 필요
