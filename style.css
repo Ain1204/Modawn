@@ -29,7 +29,7 @@
 .A {
     float: left;
     flex:1;
-    margin: 3%;
+    margin: 0%;
     margin-top: 64px;
     border-radius: 20px;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25); 
@@ -91,7 +91,7 @@
 .B {
     float: left;
     flex:1;
-    margin: 3%;
+    margin: 2%;
     margin-top: 64px;
     border-radius: 20px;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25); 
@@ -155,7 +155,7 @@
 .C {
     float: right;
     flex: 1;
-    margin: 3%;
+    margin: 0%;
     margin-top: 64px;
     border-radius: 20px;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25); 
@@ -286,4 +286,3 @@ i {
 검색 기능? 보류
 로그인, 회원가입 누르면 로그인 페이지로 이동
 작성자와 참여자에게 다른 페이지 노출 필요
-
