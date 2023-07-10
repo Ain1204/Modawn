@@ -16,18 +16,22 @@
               </svg></div>
         </div>
     </article>
-    <form name="login" action="">
+    <form id="login-form">
         <div class="loginbar" style="width: 582px; height: 406px;">
-            <div>아이디</div>
-            <input type="text" placeholder="ID" name="userid" class="account" style="width: 438px; height: 72px;"/>
-            <div>비밀번호</div>
-            <input type="password" placeholder="Password" name="userpassword" class="account" style="width: 438px; height: 72px;"/>
-            <input type="button" id="login-form-submit" onclick="check(this.form)" value="Login"/>  
+            <div style="font-size: 24px;">아이디</div>
+            <input type="text" placeholder="ID" name="userid" id="id" class="account" style="width: 438px; height: 72px;"/>
+            <div style="font-size: 24px;">비밀번호</div>
+            <input type="password" placeholder="Password" name="userpassword" id="pw" class="account" style="width: 438px; height: 72px;"/>
+            <input type="button" id="login-form-submit" onclick="check(this.form)" value="로그인"/>  
         </div>
+
     </form>
+       
+    
         <div class="join">
             <span>아직 모던 계정이 없나요?</span>
-            <span>회원가입</span>      
+            <span onclick="location.href='/nextPage.html'">회원가입</span>   
+            <!--여기 url 회원가입으로 수정하기-->   
         </div>
-    <script src="/script.js"></script> 
+    <script type="text/javascript" src="/script.js"></script> 
 </body>

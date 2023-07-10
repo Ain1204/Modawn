@@ -11,7 +11,7 @@
     margin-top: 64px;
 }
 
-.loginbar text{
+.loginbar .text{
     color: var(--text-main, #232527);
     /* S1 */
     font-family: Noto Sans;
@@ -32,17 +32,18 @@
 #login-form-submit {
     display: flex;
     width: 174px;
-    height: 52px;
+    height: 56px;
     padding: 16px 53px;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
     border-radius: 10px;
     border: 1px solid var(--gray-2, #A0A0A0);
     background: var(--gray-white, #FFF);
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    
+    margin-top: 24px;
+    font-size: 18px;
 }
 
 
@@ -82,6 +83,7 @@
 }
 .items svg {
     margin: auto;
+    display: flex;
 }
 
 .container .title {
