@@ -115,8 +115,7 @@
 }
 
 .A:hover {
-    background: var(--primary, #3E66E8);
-    -webkit-transform: scale(1);
+    background: var(--primary, #3E66E8);   
     transform: scale(1); 
     transition: all 0.1s ease;
   }
@@ -178,7 +177,6 @@
 
 .B:hover {
     background: var(--primary, #3E66E8);
-    -webkit-transform: scale(1);
     transform: scale(1); 
     transition: all 0.3s ease;
   }
@@ -243,7 +241,6 @@
 .C:hover {
     background: var(--primary, #3E66E8);
     background: linear-gradient(0deg, rgba(62,102,232,1) 0%);
-    -webkit-transform: scale(1);
     transform: scale(1); 
     transition: all 0.3s ease;
   }
