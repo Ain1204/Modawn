@@ -61,7 +61,7 @@
 .join :nth-child(1){
     color: var(--text-main, #232527);
     font-family: Noto Sans;
-    margin-right: 2px;
+    margin-right: 24px;
 }
 
 .join :nth-child(2){
