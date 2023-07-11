@@ -9,6 +9,8 @@
     margin: 0% auto;
     gap: 15px;
     margin-top: 64px;
+    width: 582px; 
+    height: 406px;
 }
 
 .loginbar .text{
@@ -27,6 +29,9 @@
     background: var(--gray-white, #FFF);
     box-shadow: none;
     border: none;
+    width: 438px; 
+    height: 72px;
+    
 }
 
 #login-form-submit {
@@ -90,10 +95,11 @@
     color: #2A2A2A;
     /* H2 */
     font-family: Noto Sans;
-    font-size: 32px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
+    margin: auto;
 }
 
 .subtitle{
@@ -135,6 +141,7 @@
     font-family: Noto Sans;
     line-height: normal;
 }
+
 .A:hover .text{ 
     color: white; 
     font-weight: bold;
@@ -144,6 +151,7 @@
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
+    margin: auto;
 }
 .A .text h4{
     font-size: 22px;
@@ -196,6 +204,7 @@
     font-family: Noto Sans;
     line-height: normal;
 }
+
 .B:hover .text{ 
     color: white; 
     font-weight: bold;
@@ -205,6 +214,7 @@
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
+    margin: auto;
 }
 .B .text h4{
     font-size: 22px;
@@ -268,6 +278,7 @@
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
+    margin: auto;
 }
 .C .text h4{
     font-size: 22px;
@@ -288,6 +299,8 @@
     font-weight: bold;
 }
 
+/*메인페이지*/
+
 body {
     padding: 0;
     margin: 0;
@@ -305,11 +318,12 @@ header {
 
 .nav-bar {
     display: flex;
+    align-items: center;
 }
 
 .logo {
-    margin-right: 20px;
-    font-weight: bold;
+    margin-right: 3%;
+    
 }
 
 ul {
@@ -321,10 +335,13 @@ ul {
     justify-content: space-between;
 }
 
+
+
 .right-bar {
     width: 40vh;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 a {
@@ -332,30 +349,141 @@ a {
     color: black;
 }
 
-form {
-    display: flex;
-    margin-left: -10px;
-}
-
-input {
+.search {
+    position: relative;
+    display: inline-block;
+    height: 30px;
     border-radius: 5px;
     border: 1px solid gray;
     box-shadow: 2px 2px 1px gray;
-    height: 25px;
-    align-items: center;
+}
+
+.searchInput {
+    display: inline-block;
+    width: 80%;
+    height: 80%;
+    border: none;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 38px;
+    box-sizing: border-box;
 }
 
 i {
     position: absolute;
-    margin-left: 145px;
-    margin-top: 7px;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
     color: darkgray;
+    font-size: 16px;
 }
 
-/*메인 페이지, 토론 메인 페이지 만들어오기
-구현 할 기능 : 메인 페이지에 서 토론 박스에 마우스 올리면 파란색으로 표시
-버튼 누르면 토론 메인 페이지로 이동
-헤더 부분에서는 로고 누르면 다시 메인 페이지로 이동
-검색 기능? 보류
-로그인, 회원가입 누르면 로그인 페이지로 이동
-작성자와 참여자에게 다른 페이지 노출 필요
+.login {
+    justify-content: center;
+}
+
+.membership {
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        font-size: 14px;
+    }
+
+    input {
+        width: 60%;
+        height: 60%;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 16px;
+    }
+
+    .wrapper {
+        margin: 1%;
+    }
+}
+
+.frame31 {
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px gray;
+    width: 768px;
+    height: 1048px;
+    background-color: rgba(239, 239, 239, 1);
+    
+}
+
+h1 {
+    margin-left: 43%;
+    margin-top: 5%;
+    font-weight: 500;
+}
+
+.membershipForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    padding: 48px 72px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10%;
+}
+
+.membershipForm>input {
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    padding-right: 20%;
+    margin-left: 10%;
+}
+
+#membership-submit {
+    width: 234px;
+    height: 52px;
+    padding: 10px 75px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 1px gray;
+    margin-left: 32%;
+    cursor: pointer;
+    background-color: white;
+}
+
+.complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 753px;
+    align-items: center;
+}
+
+.checkImg {
+    display: block;
+    width: 240px;
+    height: 240px;
+    align-self: center;
+}
+
+.complete p {
+    font-family: Noto Sans;
+    font-weight: 500;
+    font-size: 40px;
+}
