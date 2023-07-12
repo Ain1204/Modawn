@@ -100,6 +100,7 @@
     font-weight: 500;
     line-height: 100%;
     margin: auto;
+    text-align: center;
 }
 
 .subtitle{
@@ -487,3 +488,58 @@ label {
     font-weight: 500;
     font-size: 40px;
 }
+
+/*mainsubject*/
+
+.editor{
+    width: 1033px;
+    height: 1064px;
+    border-radius: 20px;
+    background: var(--gray-1, #EFEFEF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 48px 80px;
+    margin: auto;
+    margin-top: 48px;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.editor .category{
+    width: 170px;
+    height: 68px;
+    padding: 24px 22px;
+    gap: 72px;
+    border-radius: 20px;
+    background: var(--gray-white, #FFF);
+    float: left;
+    border: none;
+    margin-right: 30px;
+
+}
+.editor .opinion{
+    width: 170px;
+    height: 68px;
+    padding: 24px 22px;
+    gap: 72px;
+    border-radius: 20px;
+    background: var(--gray-white, #FFF);
+    float: left;
+    border: none;
+    margin-top: 30px;
+
+}
+
+.editor .editortitle{
+    width: 786px;
+    height: 68px;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--gray-white, #FFF);
+    float: right;
+    border: none;
+    margin-bottom: 30px;
+    
+}
+
+.editor .
