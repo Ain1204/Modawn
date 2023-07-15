@@ -530,14 +530,21 @@ label {
 .editor .category{
     width: 170px;
     height: 68px;
-    padding: 24px 22px;
+    padding: 22px 22px;
     gap: 72px;
     border-radius: 20px;
     background: var(--gray-white, #FFF);
     float: left;
     border: none;
     margin-right: 30px;
-
+    /**/
+    color: var(--text-main, #232527);
+    /* S2 */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
 
 }
 
@@ -561,31 +568,6 @@ label {
     font-weight: 400;
     line-height: 130%; /* 26px */
 }
-.editor .opinion{
-    display: flex;
-    width: 130px;
-    height: 20px;
-    padding: 24px 22px;
-    align-items: center;
-    gap: 72px;
-    border-radius: 20px;
-    background: var(--gray-white, #FFF);
-    float: left;
-    margin-right: 30px;  
-
-}
-
-.editor .items .whiteBtn{
-    margin-top: 12px;
-    margin-right: 30px;
-    margin-left: 30px;
-    width: 72px;
-    height: 44px;
-    border-radius: 10px;
-    border: 1px solid var(--gray-2, #A0A0A0);
-    background: var(--gray-white, #FFF);
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
 
 .editor .debate-Date{
     float: left;
@@ -597,6 +579,13 @@ label {
     border-radius: 20px;
     background: var(--gray-white, #FFF);
     margin-right: 31px;
+    color: var(--text-main, #232527);
+    /* S2 */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
     
 }
 
@@ -647,6 +636,14 @@ label {
     gap: 72px; 
     border-radius: 20px;
     background: var(--gray-white, #FFF);
+    /**/
+    color: var(--text-main, #232527);
+    /* S2 */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
     
 }
 #input-file {
@@ -737,7 +734,6 @@ label {
     align-items: center;
     gap: 25px;
 }
-
 .whiteBtn.active {
     border-radius: 10px;
     background: var(--primary, #3E66E8);
@@ -814,7 +810,6 @@ label {
     font-weight: 400;
     line-height: 100%;
 }
-
 .white-bg {
     background: var(--gray-1, #EFEFEF);
     color: var(--text-main, #232527);
@@ -852,133 +847,3 @@ label {
     line-height: 100%; /* 20px */
 }
 /**/
-
-/*토론 메인 페이지*/
-.line14 {
-    stroke-width: 8px;
-    stroke: var(--primary, #3E66E8);
-    transform: translate(186px, -13px);
-}
-
-.topBtn {
-    display: flex;
-    width: 700px;
-    padding: 12px 4px;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
-
-.whiteBtn.active {
-    border-radius: 10px;
-    background: var(--primary, #3E66E8);
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 60px;
-    height: 32px;
-}
-
-.whiteBtn {
-    border-radius: 10px;
-    border: 1px solid var(--gray-2, #A0A0A0);
-    background: var(--gray-white, #FFF);
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    width: 60px;
-    height: 32px;
-}
-
-.whiteBtn:nth-child(5) {
-    width: 100px;
-}
-
-.mainBlock {
-    display: flex;
-    flex-direction: column;
-    height: 920px;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-}
-
-#debate-index {
-    width: 1194px;
-    height: 80px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: var(--gray-1, #EFEFEF);
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2%;
-}
-
-.textIndex {
-    color: var(--text-main, #232527);
-    font-family: Noto Sans;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%;
-}
-
-#debate-list {
-    width: 1194px;
-    height: 72px;
-    border-radius: 20px;
-    background-color: rgba(62, 102, 232, 1);
-    color: var(--text-white, #FFF);
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2%;
-}
-
-.textList {
-    font-family: Noto Sans;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%;
-}
-
-.white-bg {
-    background: var(--gray-1, #EFEFEF);
-    color: var(--text-main, #232527);
-    width: 1194px;
-    height: 72px;
-    border-radius: 20px;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2%;
-}
-
-.writeBtn {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 8%;
-    margin-bottom: 5%;
-    
-}
-
-.writeBtn>button {
-    width: 174px;
-    padding: 16px 53px;
-    border-radius: 10px;
-    border: 1px solid var(--gray-2, #A0A0A0);
-    background: var(--gray-white, #FFF);
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    color: var(--text-main, #232527);
-    font-family: Noto Sans;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 100%; /* 20px */
-}

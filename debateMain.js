@@ -1,5 +1,6 @@
 const buttons = document.querySelectorAll('.whiteBtn');
 
+
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
     buttons.forEach((btn) => {
@@ -8,3 +9,4 @@ buttons.forEach((button) => {
     button.classList.add('active');
   });
 });
+
