@@ -432,63 +432,112 @@ i {
     }
 }
 
+/*회원가입 페이지*/
 .frame31 {
-    width: 100%;
-    height: auto;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    padding: 48px 102px;
+    flex-direction: column;
     align-items: center;
+    gap: 48px;
 }
 
 .block {
-    border: 1px solid gray;
-    border-radius: 10px;
-    box-shadow: 2px 2px 1px gray;
-    width: 768px;
-    height: 1048px;
-    background-color: rgba(239, 239, 239, 1);
+    border-radius: 20px;
+    background: var(--gray-1, #EFEFEF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    width: 786px;
+    height: 1072px;
     
 }
 
+.h1_membership {
+    display: flex;
+    justify-content: center;
+}
+
 h1 {
-    margin-left: 43%;
-    margin-top: 5%;
-    font-weight: 500;
+    color: var(--text-main, #232527);
+    font-family: Noto Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
 }
 
 .membershipForm {
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
     padding: 48px 72px;
 }
 
-label {
-    font-size: 16px;
+.membershipText {
+    color: var(--text-main, #232527);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
     font-weight: 500;
-    margin-left: 10%;
+    line-height: 100%;
 }
 
-.membershipForm>input {
-    border-radius: 10px;
-    background-color: white;
+
+.membershipText>input {
+    display: flex;
+    width: 582px;
+    height: 22px;
+    padding: 24px 20px;
+    align-items: center;
+    border-radius: 20px;
     border: none;
+    background: var(--gray-white, #FFF);
+    margin-top: 2%;
     font-size: 20px;
-    padding: 10px;
-    padding-right: 20%;
-    margin-left: 10%;
+    
+}
+
+.star {
+    color: var(--secondary, #EB6962);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.redHidden {
+    color: var(--text-warning, #DA0000);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    display: none;
 }
 
 #membership-submit {
+    display: flex;
+    padding: 16px 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+}
+
+#membership-submit>button {
     width: 234px;
     height: 52px;
-    padding: 10px 75px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    box-shadow: 2px 2px 1px gray;
-    margin-left: 32%;
+    border-radius: 10px;
+    border: 1px solid var(--gray-2, #A0A0A0);
+    background: var(--gray-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--text-main, #232527);
+    text-align: center;
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
     cursor: pointer;
-    background-color: white;
 }
 
 .complete {
@@ -507,9 +556,13 @@ label {
 }
 
 .complete p {
+    color: #000;
+    text-align: center;
     font-family: Noto Sans;
+    font-size: 48px;
+    font-style: normal;
     font-weight: 500;
-    font-size: 40px;
+    line-height: 100%;
 }
 
 /*mainsubject*/
