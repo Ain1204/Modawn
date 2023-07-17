@@ -515,6 +515,10 @@ h1 {
     display: none;
 }
 
+.redBorder {
+    border: 2px solid var(--warning, #DA0000) !important;
+}
+
 #membership-submit {
     display: flex;
     padding: 16px 80px;
