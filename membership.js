@@ -15,8 +15,10 @@ function submit(event) {
 function input() {
    if (passwordCheckInput.value !== passwordInput.value) {
     passwordError.style.display = "block";
+    passwordCheckInput.classList.add("redBorder");
    } else {
     passwordError.style.display = "none";
+    passwordCheckInput.classList.remove("redBorder");
    }
 }
 
