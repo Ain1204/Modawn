@@ -1,7 +1,7 @@
 const membershipJoin = document.querySelector(".membershipForm");
 const passwordInput = document.querySelector(".password");
 const passwordCheckInput = document.querySelector(".passwordCheck");
-
+const passwordError = document.querySelector(".redHidden");
 
 function submit(event) {
     event.preventDefault();
