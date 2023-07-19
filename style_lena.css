@@ -1,0 +1,375 @@
+/*메인페이지*/
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    border-bottom: 2px solid lightgray;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 20px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 3%;
+    
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    width: 30vh;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.right-bar {
+    width: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.search {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 1px gray;
+}
+
+.searchInput {
+    display: inline-block;
+    width: 80%;
+    height: 80%;
+    border: none;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 38px;
+    box-sizing: border-box;
+}
+
+i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: darkgray;
+    font-size: 16px;
+}
+
+.login {
+    justify-content: center;
+}
+
+.membership {
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        font-size: 14px;
+    }
+
+    input {
+        width: 60%;
+        height: 60%;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 16px;
+    }
+
+    .wrapper {
+        margin: 1%;
+    }
+}
+
+/*회원가입 페이지*/
+.frame31 {
+    display: flex;
+    padding: 48px 102px;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.block {
+    border-radius: 20px;
+    background: var(--gray-1, #EFEFEF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    width: 786px;
+    height: 1072px;
+    
+}
+
+.h1_membership {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: var(--text-main, #232527);
+    font-family: Noto Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.membershipForm {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 72px;
+}
+
+.membershipText {
+    color: var(--text-main, #232527);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+
+.membershipText>input {
+    display: flex;
+    width: 582px;
+    height: 22px;
+    padding: 24px 20px;
+    align-items: center;
+    border-radius: 20px;
+    border: none;
+    background: var(--gray-white, #FFF);
+    margin-top: 2%;
+    font-size: 20px;
+    
+}
+
+.star {
+    color: var(--secondary, #EB6962);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.redHidden {
+    color: var(--text-warning, #DA0000);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    display: none;
+}
+
+.redBorder {
+    border: 2px solid var(--warning, #DA0000) !important;
+}
+
+#membership-submit {
+    display: flex;
+    padding: 16px 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+}
+
+#membership-submit>button {
+    width: 234px;
+    height: 52px;
+    border-radius: 10px;
+    border: 1px solid var(--gray-2, #A0A0A0);
+    background: var(--gray-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--text-main, #232527);
+    text-align: center;
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    cursor: pointer;
+}
+
+.complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 753px;
+    align-items: center;
+}
+
+.checkImg {
+    display: block;
+    width: 240px;
+    height: 240px;
+    align-self: center;
+}
+
+.complete p {
+    color: #000;
+    text-align: center;
+    font-family: Noto Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+/*토론 메인 페이지*/
+.line14 {
+    stroke-width: 8px;
+    stroke: var(--primary, #3E66E8);
+    transform: translate(186px, -13px);
+}
+
+.topBtn {
+    display: flex;
+    width: 700px;
+    padding: 12px 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.whiteBtn.active {
+    border-radius: 10px;
+    background: var(--primary, #3E66E8);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 60px;
+    height: 32px;
+}
+
+.whiteBtn {
+    border-radius: 10px;
+    border: 1px solid var(--gray-2, #A0A0A0);
+    background: var(--gray-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    width: 60px;
+    height: 32px;
+}
+
+.whiteBtn:nth-child(5) {
+    width: 100px;
+}
+
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    height: 920px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+#debate-index {
+    width: 1194px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--gray-1, #EFEFEF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.textIndex {
+    color: var(--text-main, #232527);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+#debate-list {
+    width: 1194px;
+    height: 72px;
+    border-radius: 20px;
+    background-color: rgba(62, 102, 232, 1);
+    color: var(--text-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.textList {
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.white-bg {
+    background: var(--gray-1, #EFEFEF);
+    color: var(--text-main, #232527);
+    width: 1194px;
+    height: 72px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.writeBtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    
+}
+
+.writeBtn>button {
+    width: 174px;
+    padding: 16px 53px;
+    border-radius: 10px;
+    border: 1px solid var(--gray-2, #A0A0A0);
+    background: var(--gray-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    color: var(--text-main, #232527);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
+}
