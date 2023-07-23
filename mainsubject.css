@@ -1,0 +1,212 @@
+/*mainsubject*/
+@media all and (min-width:768px) and (max-width:1080px){
+    .editor{
+        width: 600px;
+        border-radius: 20px;
+        background: var(--gray-1, #EFEFEF);
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 48px 80px;
+        margin: auto;
+        margin-top: 48px;
+        align-items: center;
+        flex-direction: column;
+    
+    }
+    
+}
+
+.star {
+    color: var(--secondary, #EB6962);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    float: left;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.editor{
+    width: 1033px;
+    border-radius: 20px;
+    background: var(--gray-1, #EFEFEF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 48px 80px;
+    margin: auto;
+    margin-top: 48px;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.editor .category{
+    width: 170px;
+    height: 68px;
+    padding: 22px 22px;
+    gap: 72px;
+    border-radius: 20px;
+    background: var(--gray-white, #FFF);
+    float: left;
+    border: none;
+    margin-right: 30px;
+    /**/
+    color: var(--text-main, #232527);
+    /* S2 */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
+    cursor: pointer;
+
+}
+
+.editor .editortitle{
+    padding: 24px 22px 24px 22px;
+    width: 742px;
+    height: 26px;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--gray-white, #FFF);
+    float: left;
+    border: none;
+    margin-bottom: 30px;
+   /*text*/
+    color: var(--text-unactive, #A0A0A0);
+
+    /* B1_long */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+}
+
+.editor .debate-Date{
+    float: left;
+    width: 130px;
+    height: 20px;
+    padding: 24px 22px;
+    align-items: center;
+    gap: 72px; 
+    border-radius: 20px;
+    background: var(--gray-white, #FFF);
+    margin-right: 31px;
+    color: var(--text-main, #232527);
+    /* S2 */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
+    
+}
+
+.editor .date-Detail {
+    float: left;
+    padding: 24px 22px 24px 22px;
+    width: 742px;
+    height: 26px;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--gray-white, #FFF);
+    border: none;
+    margin-bottom: 30px;
+    align-items: center;
+   /*text*/
+    color: var(--text-unactive, #A0A0A0);
+    /* B1_long */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+}
+.editor .detail {
+    display: flex;
+    width: 241px;
+    padding: 24px 727px 420px 22px;
+    align-items: flex-start;
+    gap: 10px;
+    border: none;
+    border-radius: 20px;
+    /*text*/
+    color: var(--text-unactive, #A0A0A0);
+    /* B1_long */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+}
+
+.editor .Select-img{
+    float: left;
+    width: 116px;
+    height: 20px;
+    padding: 16px 80px;
+    align-items: center;
+    gap: 72px; 
+    border-radius: 20px;
+    background: var(--gray-white, #FFF);
+    border-radius: 10px;
+    border: 1px solid var(--gray-2, #A0A0A0);
+    background: var(--gray-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 20px;
+    /**/
+    color: var(--text-main, #232527);
+    /* S2 */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
+    cursor: pointer;
+    
+}
+#input-file {
+    display: none;
+}
+
+
+.editor .url-Linked {
+    float: left;
+    padding: 24px 22px 24px 22px;
+    width: 955px;
+    height: 26px;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--gray-white, #FFF);
+    border: none;
+    margin-bottom: 30px;
+    margin-top: 32px;
+    margin-left: 20px;
+    /*text*/
+    color: var(--text-unactive, #A0A0A0);
+    /* B1_long */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+    margin-right: 100px;
+}
+#debate-form-submit{
+    display: flex;
+    width: 64px;
+    height: 44px;
+    padding: 12px 4px;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--gray-2, #A0A0A0);
+    background: var(--gray-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+    margin-left: 400px;
+    font-size: 18px;
+    cursor: pointer;
+}
