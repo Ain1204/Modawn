@@ -1,0 +1,245 @@
+/* index */
+.container {
+
+}
+.items {
+    display: flex;
+    margin-top: 106px;
+    margin-bottom: 32.86px;
+}
+.items svg {
+    margin: auto;
+    display: flex;
+}
+
+.container .title{
+    color: #2A2A2A;
+    /* H2 */
+    font-family: Noto Sans;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.subtitle{
+
+}
+.Debate {
+    display: flex;
+}
+.Debate button {
+    display: inline-flex;
+    padding: 16px 80px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--gray-2, #A0A0A0);
+    background: var(--gray-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 234px;
+    height: 52px;
+    font-size: 20px;
+    margin-left: 72px;
+    margin-top: 70px;
+    margin-right: 72px;
+
+}
+.A {
+    float: left;
+    flex:1;
+    margin: 0%;
+    margin-top: 64px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+    background: var(--gray-1, #EFEFEF);
+    transition: all 0.3s ease;
+    overflow: hidden;   
+}
+
+.A svg{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: block;
+    margin-top: 67px;
+    margin-bottom: 26.5px;
+
+}
+
+.A .text{
+    text-align: center;
+    font-family: Noto Sans;
+    line-height: normal;
+    color: #2A2A2A;
+}
+
+.A .text h1{
+    margin-top: 14px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    margin: auto;
+}
+.A .text h4{
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 56px;
+}
+.A .text div{
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 14px;
+    color: #7E7E7E;
+}
+
+.A:hover{
+    background: var(--primary, #3E66E8);   
+    transform: scale(1); 
+    transition: all 0.1s ease;
+
+  }
+
+  .A:hover .text{ 
+    color: white; 
+    font-weight: bold;
+}
+
+.A .text:hover div{
+    color: white; 
+    font-weight: bold;
+}
+
+.B {
+    float: left;
+    flex:1;
+    margin: 2%;
+    margin-top: 64px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+    background: var(--gray-1, #EFEFEF);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.B:hover {
+    background: var(--primary, #3E66E8);
+    transform: scale(1); 
+    transition: all 0.3s ease;
+  }
+
+.B svg{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: block;
+    margin-top: 67px;
+    margin-bottom: 26.5px;
+}
+.B .text{
+    color: #2A2A2A;
+    text-align: center;
+    font-family: Noto Sans;
+    line-height: normal;
+}
+
+.B:hover .text{ 
+    color: white; 
+    font-weight: bold;
+}
+.B .text h1{
+    margin-top: 14px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    margin: auto;
+}
+.B .text h4{
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 56px;
+}
+.B .text div{
+    color: #7E7E7E;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 14px;
+}
+
+.B .text:hover div{
+    color: white; 
+    font-weight: bold;
+}
+
+
+.C {
+    float: right;
+    flex: 1;
+    margin: 0%;
+    margin-top: 64px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+    background: var(--gray-1, #EFEFEF);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.C:hover {
+    background: var(--primary, #3E66E8);
+    background: linear-gradient(0deg, rgba(62,102,232,1) 0%);
+    transform: scale(1); 
+    transition: all 0.3s ease;
+  }
+.C svg{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: block;
+    margin-top: 67px;
+    margin-bottom: 26.5px;
+}
+.C .text{
+    color: #2A2A2A;
+    text-align: center;
+    font-family: Noto Sans;
+    line-height: normal;
+}
+.C:hover .text{ 
+    color: white; 
+    font-weight: bold;
+}
+.C .text h1{
+    margin-top: 14px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    margin: auto;
+}
+.C .text h4{
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 56px;
+}
+.C .text div{
+    color: #7E7E7E;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 14px;
+}
+
+.C .text:hover div{
+    color: white; 
+    font-weight: bold;
+}

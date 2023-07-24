@@ -1,0 +1,80 @@
+/* Login */
+.loginbar{
+    border-radius: 20px;
+    background: var(--gray-1, #EFEFEF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 48px 72px;
+    flex-direction: column;
+    display: flex;
+    margin: 0% auto;
+    gap: 15px;
+    margin-top: 64px;
+    width: 582px; 
+    height: 406px;
+}
+
+.loginbar .text{
+    color: var(--text-main, #232527);
+    /* S1 */
+    font-family: Noto Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+
+}
+
+.loginbar .account{
+    border-radius: 20px;
+    background: var(--gray-white, #FFF);
+    box-shadow: none;
+    border: none;
+    width: 438px; 
+    height: 72px;
+    
+}
+
+#login-form-submit {
+    display: flex;
+    width: 174px;
+    height: 56px;
+    padding: 16px 53px;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--gray-2, #A0A0A0);
+    background: var(--gray-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 24px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.join{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 64px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    cursor: pointer;
+}
+
+
+.join :nth-child(1){
+    color: var(--text-main, #232527);
+    font-family: Noto Sans;
+    margin-right: 24px;
+}
+
+.join :nth-child(2){
+    color: var(--primary, #3E66E8);
+    font-family: Noto Sans;
+    text-decoration-line: underline;
+}
+

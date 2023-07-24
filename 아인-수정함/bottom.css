@@ -1,0 +1,29 @@
+/*bottom*/
+.bottom {
+    height: 80px;
+    flex-shrink: 0;
+    background: var(--gray-1, #EFEFEF);
+    margin-top: 48px;
+    
+    
+}
+.bottom svg{
+    margin-left: 360px;
+    margin-top: 12px;
+
+}
+
+.bottom span {
+    color: var(--text-main, #232527);
+    /* B1 */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; 
+    /* 20px */
+    margin: 30px 108px;
+
+}
+
+
