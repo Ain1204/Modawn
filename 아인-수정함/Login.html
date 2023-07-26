@@ -20,10 +20,10 @@
     <form id="login-form">
         <div class="loginbar">     
             <div style="font-size: 24px;">아이디</div>
-            <input type="text" placeholder="ID" name="userid" id="id" class="account"/>
+            <input type="email" id="email" placeholder="ID" class="account"/>
             <div style="font-size: 24px;">비밀번호</div>
-            <input type="password" id="password"  placeholder="Password" name="userpassword" class="account" style="width: 438px; height: 72px;"/>
-            <input type="button" id="login-form-submit" value="로그인"/>  
+            <input type="password" id="password" placeholder="Password" class="account" style="width: 438px; height: 72px;"/>
+            <button type="button" id="login-form-submit" onclick="login()">로그인</button>
         </div>
     </form>
        

@@ -11,9 +11,9 @@ form.addEventListener("click", submit);
 function registerUser() {
     const username = document.getElementById('username').value;
     const nickname = document.getElementById('nickname').value;
-    const id = document.getElementById('email').value;
+    const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    const passwordCheck = document.getElementById('confirmPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
 
     // 회원가입 정보를 객체로 만들기
     const userData = {
@@ -24,15 +24,14 @@ function registerUser() {
         confirmPassword: confirmPassword,
     };
 
-
-    fetch("http://43.200.164.174:3000/api/user/register",{
-        method : "post",
+    fetch("http://43.200.164.174:3000/api/user/register", {
+        method: "POST",
         headers: {
             'Content-Type': 'application/json',
-            // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: JSON.stringify(userData), // 객체 데이터를 문자열로 변환하여 전달
-    })  
+    })
+    .then((response) => response.json())
     .then((response) => {
         if (response.success) {
             // 회원가입 성공 시 Login.html로 이동

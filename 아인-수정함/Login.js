@@ -5,20 +5,29 @@ fetch("http://43.200.164.174:3000/api/user/login")
 .then((data) => console.log(data));
 */
 
+function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
 
-fetch('http://43.200.164.174:3000/api/user/login', {
-  method: "GET", // GET 요청으로 변경
-  headers: {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json',
-  },
-  // GET 요청의 경우에는 body를 사용하지 않습니다.
-})
-.then(response => response.json())
-.then(response => {
-  if (response.token) {
-    localStorage.setItem("token", response.token);
-  } else {
-    alert('아이디 / 비밀번호를 다시 입력해주세요!');
+      // 이메일과 비밀번호를 GET 요청으로 보냄
+      fetch(`http://43.200.164.174:3000/api/user/login?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`, {
+          method: "GET",
+          headers: {
+              'Content-Type': 'application/json',
+          },
+      })
+      .then((response) => response.json())
+      .then((response) => {
+          if (response.token) {
+              // 로그인 성공 시 토큰을 localStorage에 저장하고, 다른 페이지로 이동
+              localStorage.setItem("token", response.token);
+              window.location.href = "debateList.html"; // 로그인 성공 후 이동할 페이지
+          } else {
+              // 로그인 실패 시 에러 메시지 출력 또는 다른 처리
+              console.log("로그인에 실패하였습니다.");
+          }
+      })
+      .catch((error) => {
+          console.error("오류 발생:", error);
+      });
   }
-});
