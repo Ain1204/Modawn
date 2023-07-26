@@ -1,0 +1,106 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    border-bottom: 2px solid lightgray;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 20px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 3%;
+    
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    width: 30vh;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.right-bar {
+    width: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.search {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 1px gray;
+}
+
+.searchInput {
+    display: inline-block;
+    width: 80%;
+    height: 80%;
+    border: none;
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: 38px;
+    box-sizing: border-box;
+}
+
+i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: darkgray;
+    font-size: 16px;
+}
+
+.login {
+    justify-content: center;
+}
+
+.membership {
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        font-size: 14px;
+    }
+
+    input {
+        width: 60%;
+        height: 60%;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        font-size: 16px;
+    }
+
+    .wrapper {
+        margin: 1%;
+    }
+}
