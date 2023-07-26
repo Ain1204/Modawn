@@ -9,15 +9,19 @@ function submit(event) {
 form.addEventListener("click", submit);
 */
 
-fetch("http://43.200.164.174:3000/api/user/register",{
-	method : "POST",
+fetch('http://43.200.164.174:3000/api/user/register',{
+	method : "post",
+    headers: {
+        'Content-Type': 'application/json',
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
    	body : JSON.stringify({
             name : username,
             nickname : nickname,
             email : id,
             password: password,
             confirmPassword : passwordCheck,
-        })
+        }),
 })
-.then(res => res.json())
-.then(res => console.log(res))
+.then((response) => response.json())
+.then((response) => console.log(response));
