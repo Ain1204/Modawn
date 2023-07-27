@@ -282,3 +282,15 @@
     line-height: 100%; 
     margin: 0;
 }
+
+.whiteBtn>a {
+    color: var(--text-main, #232527);
+    text-align: center;
+
+    /* S2 */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
+}
