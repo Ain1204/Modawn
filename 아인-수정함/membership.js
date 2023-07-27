@@ -31,11 +31,9 @@ function registerUser() {
         },
         body: JSON.stringify(userData), // 객체 데이터를 문자열로 변환하여 전달
     })
-    .then((response) => response.json())
     .then((response) => {
-        if (response.success) {
+        if (response.statusCode === 201) {
             // 회원가입 성공 시 Login.html로 이동
-            localStorage.setItem("token", response.data.token);
             window.location.href = "joinComplete.html";
         } else {
             // 회원가입 실패 시 에러 메시지 출력 또는 다른 처리
