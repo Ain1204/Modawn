@@ -35,7 +35,8 @@ function registerUser() {
     .then((response) => {
         if (response.success) {
             // 회원가입 성공 시 Login.html로 이동
-            window.location.href = "Login.html";
+            localStorage.setItem("token", response.data.token);
+            window.location.href = "joinComplete.html";
         } else {
             // 회원가입 실패 시 에러 메시지 출력 또는 다른 처리
             console.log("회원가입에 실패하였습니다.");

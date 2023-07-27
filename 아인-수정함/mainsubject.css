@@ -1,19 +1,7 @@
 /*mainsubject*/
-@media all and (min-width:768px) and (max-width:1080px){
-    .editor{
-        width: 600px;
-        border-radius: 20px;
-        background: var(--gray-1, #EFEFEF);
-        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        padding: 48px 80px;
-        margin: auto;
-        margin-top: 48px;
-        align-items: center;
-        flex-direction: column;
-    
-    }
-    
-}
+
+
+
 
 .star {
     color: var(--secondary, #EB6962);
@@ -194,6 +182,7 @@
     margin-right: 100px;
 }
 #debate-form-submit{
+    
     display: flex;
     width: 64px;
     height: 44px;
@@ -203,10 +192,26 @@
     border: 1px solid var(--gray-2, #A0A0A0);
     background: var(--gray-white, #FFF);
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
     justify-content: center;
     align-items: center;
     margin-top: 48px;
-    margin-left: 400px;
+    margin-left: 480px;
     font-size: 18px;
     cursor: pointer;
 }
+
+/* 768px에서 1080px 사이의 화면 크기에 대한 미디어 쿼리 */
+@media all and (min-width: 768px) and (max-width: 1080px) {
+    .editor {
+        width: 472px;
+        border-radius: 20px;
+        background: var(--gray-1, #EFEFEF);
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 48px 80px;
+        margin: auto;
+        margin-top: 48px;
+        align-items: center;
+        flex-direction: column;
+        /* 다른 필요한 스타일 추가 */
+    }}
