@@ -119,3 +119,9 @@ a {
         margin: 1%;
     }
 }
+
+.line14 {
+    stroke-width: 8px;
+    stroke: var(--primary, #3E66E8);
+    transform: translate(186px, -13px);
+}
