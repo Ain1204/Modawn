@@ -265,11 +265,6 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
-    color: red;
-}
-
-.redColor {
-    color: red;
 }
 
 .btnWrapper>p {
@@ -281,4 +276,69 @@
     font-weight: 400;
     line-height: 100%; 
     margin: 0;
+}
+
+.redBtn {
+    display: flex;
+    width: 72px;
+    padding: 12px 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--secondary, #EB6962);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: var(--text-main, #232527);
+    text-align: center;
+    cursor: pointer;
+    /* B1 */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 20px */
+}
+
+.whiteBtn>a {
+    color: var(--text-main, #232527);
+    text-align: center;
+
+    /* S2 */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
+}
+
+.titleTitle>.whiteBtn>a {
+    color: var(--text-main, #232527);
+    text-align: center;
+
+    /* B1 */
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 20px */
+}
+
+.titleTitle>.whiteBtn {
+    color: var(--text-main, #232527);
+    text-align: center;
+
+    /* B1 */
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 20px */
+}
+
+.heartRed {
+    border-radius: 10px;
+    border: 3px solid var(--secondary, #EB6962);
+    background: var(--gray-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
