@@ -1,5 +1,11 @@
 /*토론 메인 페이지*/
 
+.line14 {
+    stroke-width: 8px;
+    stroke: var(--primary, #3E66E8);
+    transform: translate(186px, -13px);
+}
+
 .topBtn {
     display: flex;
     width: 700px;
@@ -76,6 +82,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 2%;
+    cursor: pointer;
 }
 
 .textList {
@@ -84,6 +91,14 @@
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
+}
+
+#debate-list>a {
+    width: 1194px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Noto Sans;
+    color: var(--text-white, #FFF);
 }
 
 .white-bg {
@@ -104,7 +119,7 @@
     justify-content: flex-end;
     margin-right: 10%;
     margin-bottom: 5%;
-
+    
 }
 
 .writeBtn>button {
@@ -121,4 +136,45 @@
     font-style: normal;
     font-weight: 600;
     line-height: 100%; /* 20px */
+}
+
+.nextPage {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.nowPage {
+    display: flex;
+    padding: 4px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: var(--primary, #3E66E8);
+    color: var(--text-white, #FFF) !important;
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.nextPage>span {
+    display: flex;
+    padding: 4px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    color: var(--text-main, #232527);
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
 }
