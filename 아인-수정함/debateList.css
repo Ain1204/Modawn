@@ -19,6 +19,7 @@
 }
 
 .titleTitle {
+    margin-top: 100px;
     width: 1194px;
     display: flex;
     justify-content: space-between;

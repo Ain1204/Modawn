@@ -19,6 +19,7 @@
 }
 
 .titleTitle {
+    margin-top: 100px;
     width: 1194px;
     display: flex;
     justify-content: space-between;
@@ -75,24 +76,27 @@
 }
 
 .debateContent {
-    width: 997px;
-    display: inline-flex;
-    padding: 48px 102px;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
+    width: 1033px;
     border-radius: 20px;
     background: var(--gray-1, #EFEFEF);
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 48px 80px;
+    margin: auto;
+    margin-top: 48px;
+    align-items: center;
+    flex-direction: column;
 }
 
 .debateContent>img {
     width: 378px;
     height: 288px;
     flex-shrink: 0;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+
 }
 
 .imgUrl {
+    margin-bottom: 32px;
     display: flex;
     width: 241px;
     height: 20px;
@@ -275,7 +279,6 @@
     line-height: 100%; 
     margin: 0;
 }
-
 .debate-Date{
     float: left;
     width: 130px;
