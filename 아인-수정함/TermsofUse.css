@@ -1,0 +1,44 @@
+
+.toU {
+    width: 1600px;
+    flex-shrink: 0; 
+    margin: 0 auto; 
+    width: 50%;
+    margin-top: 100px;
+}
+
+.toU :nth-child(1) {
+    color: var(--text-main, #232527);
+
+    /* H2_bold */
+    font-family: Noto Sans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 32px */
+    
+
+}
+
+
+.toU h3 {
+    color: var(--text-main, #232527);
+
+    /* S1_bold */
+    font-family: Noto Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.toU p {
+    color: var(--text-main, #232527);
+
+    /* B2_long */
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}

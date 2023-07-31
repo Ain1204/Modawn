@@ -31,3 +31,7 @@ window.onload = function() {
 function goToWritePage() {
   window.location.href = 'mainsubject.html';
 }
+
+
+
+

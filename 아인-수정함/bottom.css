@@ -1,29 +1,44 @@
 /*bottom*/
 .bottom {
+    margin-top: 100px;
+    display: flex;
     height: 80px;
-    flex-shrink: 0;
+    padding: 18px 300px 18px 300px;
+    align-items: center;
+    gap: 32px;
     background: var(--gray-1, #EFEFEF);
-    margin-top: 48px;
-    
+
     
 }
-.bottom svg{
-    margin-left: 360px;
-    margin-top: 12px;
+
+.bottom .maintext {
+    height: 44px;
+    align-items: center;
+
+   
 
 }
+.bottom svg {
 
-.bottom span {
-    color: var(--text-main, #232527);
-    /* B1 */
+}
+.bottom .maintext a{
+    color: var(--text-sub, #444);
+
+    /* Sm1_bold */
     font-family: Noto Sans;
-    font-size: 20px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 14px */
+}
+.bottom .maintext :nth-child(3){
+    color: var(--text-main, #232527);
+
+    /* Sm2 */
+    font-family: Noto Sans;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%; 
-    /* 20px */
-    margin: 30px 108px;
-
+    line-height: 100%; /* 12px */
 }
-
 
