@@ -108,13 +108,8 @@ a {
     font-size: 16px;
 }
 
-.login {
-    justify-content: center;
+.svg-container {
     cursor: pointer;
-}
-
-.membership {
-    justify-content: flex-end;
 }
 
 @media screen and (max-width: 800px) {
