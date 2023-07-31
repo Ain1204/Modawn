@@ -9,15 +9,15 @@ header {
   }
   
   /* 상단바가 고정되어 내용이 상단바 아래로 가려지는 것을 방지하기 위해 body 요소의 top margin을 조정합니다. */
-  body {
-    margin-top: 60px; /* margin 값은 상단바의 높이와 일치하도록 설정하세요 */
-  }
+  
+     /* margin 값은 상단바의 높이와 일치하도록 설정하세요 */
+
   
   /* 나머지 상단바 요소들에 필요한 스타일을 추가하세요. */
   
 
 body {
-    padding: 0;
+    padding: 86px 0 0 0;
     margin: 0;
 }
 
