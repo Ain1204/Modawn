@@ -32,6 +32,18 @@ function goToWritePage() {
   window.location.href = 'mainsubject.html';
 }
 
-
-
-
+fetch('http://43.200.164.174:3000/api/health-check')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // 서버로부터 받은 데이터(data)를 처리하는 로직을 작성합니다.
+    console.log('서버 응답 데이터:', data);
+  })
+  .catch(error => {
+    // 오류가 발생한 경우 오류 처리 로직을 작성합니다.
+    console.error('오류 발생:', error);
+  });
