@@ -45,3 +45,19 @@ function registerUser() {
         console.error("오류 발생:", error);
     });
 }
+
+const passwordInput = document.querySelector("#password");
+const passwordCheckInput = document.querySelector("#confirmPassword");
+const passwordError = document.querySelector(".redHidden");
+
+function input() {
+    if (passwordCheckInput.value !== passwordInput.value) {
+     passwordError.style.display = "block";
+     passwordCheckInput.classList.add("redBorder");
+    } else {
+     passwordError.style.display = "none";
+     passwordCheckInput.classList.remove("redBorder");
+    }
+ }
+
+ passwordCheckInput.addEventListener("input", input);
