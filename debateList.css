@@ -342,3 +342,13 @@
     background: var(--gray-white, #FFF);
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
+.whiteBtn {
+    border-radius: 10px;
+    border: 1px solid var(--gray-2, #A0A0A0);
+    background: var(--gray-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    width: 60px;
+    height: 32px;
+}
