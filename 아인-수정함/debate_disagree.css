@@ -52,7 +52,7 @@
     height: 80px;
     flex-shrink: 0;
     border-radius: 20px;
-    background: var(--secondary, #EB6962);
+    background: var(--primary, #3E66E8);
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
@@ -212,7 +212,7 @@
 }
 
 .agree>h1 {
-    color: var(--secondary, #EB6962);
+    color: var(--primary, #3E66E8);
 
     /* H1_bold */
     font-family: Noto Sans;
