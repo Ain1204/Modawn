@@ -206,3 +206,28 @@ h1 {
     line-height: 100%; /* 20px */
     text-decoration-line: underline;
 }
+
+.complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 753px;
+    align-items: center;
+}
+
+.checkImg {
+    display: block;
+    width: 240px;
+    height: 240px;
+    align-self: center;
+}
+
+.complete p {
+    color: #000;
+    text-align: center;
+    font-family: Noto Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
