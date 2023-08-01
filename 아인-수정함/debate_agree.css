@@ -52,12 +52,23 @@
     height: 80px;
     flex-shrink: 0;
     border-radius: 20px;
-    background: var(--gray-1, #EFEFEF);
+    background: var(--primary, #3E66E8);
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 2%;
+}
+
+#debate-index>.textIndex {
+    color: var(--gray-white, #FFF);
+
+/* S2 */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
 }
 
 .textIndex {
@@ -91,12 +102,11 @@
     line-height: 100%;
 }
 
-#debate-list>a {
-    width: 1194px;
+.white-bg>a {
+    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    font-family: Noto Sans;
-    color: var(--text-white, #FFF);
 }
 
 .white-bg {
@@ -198,7 +208,6 @@
 }
 
 .agree {
-    margin-top: 50px;
     width: 1194px;
 }
 
