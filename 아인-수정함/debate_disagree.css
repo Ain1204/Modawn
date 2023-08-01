@@ -1,0 +1,223 @@
+.line14 {
+    stroke-width: 8px;
+    stroke: var(--primary, #3E66E8);
+    transform: translate(186px, -13px);
+}
+
+.topBtn {
+    display: flex;
+    width: 700px;
+    padding: 12px 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.whiteBtn.active {
+    border-radius: 10px;
+    background: var(--primary, #3E66E8);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 60px;
+    height: 32px;
+}
+
+.whiteBtn {
+    border-radius: 10px;
+    border: 1px solid var(--gray-2, #A0A0A0);
+    background: var(--gray-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    width: 60px;
+    height: 32px;
+}
+
+.whiteBtn:nth-child(5) {
+    width: 100px;
+}
+
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    height: 920px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+#debate-index {
+    width: 1194px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: var(--secondary, #EB6962);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+#debate-index>.textIndex {
+    color: var(--gray-white, #FFF);
+
+/* S2 */
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
+}
+
+.textIndex {
+    color: var(--text-main, #232527);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+#debate-list {
+    width: 1194px;
+    height: 72px;
+    border-radius: 20px;
+    background-color: rgba(62, 102, 232, 1);
+    color: var(--text-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    cursor: pointer;
+}
+
+.textList {
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.white-bg>a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.white-bg {
+    background: var(--gray-1, #EFEFEF);
+    color: var(--text-main, #232527);
+    width: 1194px;
+    height: 72px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+
+.writeBtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    
+}
+
+.writeBtn>button {
+    width: 174px;
+    padding: 16px 53px;
+    border-radius: 10px;
+    border: 1px solid var(--gray-2, #A0A0A0);
+    background: var(--gray-white, #FFF);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    color: var(--text-main, #232527);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 20px */
+}
+
+.nextPage {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.nowPage {
+    display: flex;
+    padding: 4px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: var(--primary, #3E66E8);
+    color: var(--text-white, #FFF) !important;
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.nextPage>span {
+    display: flex;
+    padding: 4px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    color: var(--text-main, #232527);
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.debateTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+}
+
+.section {
+    width: 1194px;
+}
+
+.section>a, .section>span {
+    color: var(--text-unactive, #A0A0A0);
+    font-family: Noto Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.agree {
+    width: 1194px;
+}
+
+.agree>h1 {
+    color: var(--secondary, #EB6962);
+
+    /* H1_bold */
+    font-family: Noto Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 48px */
+}
