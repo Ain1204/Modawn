@@ -21,11 +21,19 @@ window.onload = function() {
     const writeButton = document.getElementById('write-button');
     writeButton.disabled = false;
     writeButton.addEventListener('click', goToWritePage);
+
+    const nextBtn = document.getElementById("debate-list");
+    nextBtn.addEventListener("click", gotoDebateList);
   } else {
     // 토큰이 없을 경우, login.html 페이지로 리다이렉트
     window.location.href = 'login.html';
   }
 };
+
+//토론 상세 페이지로 이동하는 함수
+function gotoDebateList() {
+  window.location.href = "debateList_part.html";
+}
 
 // 글쓰기 페이지로 이동하는 함수
 function goToWritePage() {
