@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="membership.css">
     <link rel="stylesheet" href="debateComp.css">
+    <link rel="stylesheet" href="debateMain.css">
     <link rel="stylesheet" href="bottom.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,17 +108,19 @@
         
         <div class="debateWrapper">
                 <div class="debateContent">
-                    <img src="" alt="">
+                    <div class="items"> 
+                        <img src="" alt="">
+                    </div>
                     <p>
                         <div class="debate-Date">주장</div>
-                        <span><input class="date-Detail" placeholder=""></span>
+                        <span><input id="title" class="date-Detail" placeholder=""></span>
                     </p>
                     <p>
                         <div class="debate-Date">근거</div>
-                        <span><input class="date-Detail" placeholder=""></span>
+                        <span><input id="content" class="date-Detail" placeholder=""></span>
                     </p>
                 
-                    <span class="imgUrl">
+                    <span id="imgUrl" class="imgUrl">
                         <p></p>
                     </span>
                     <span class="imgDetail">
@@ -149,5 +152,6 @@
     </footer>
     <script src="debateList.js"></script>
     <script src="header.js"></script>
+    <script src="mainsubject.js"></script>
 </body>
 </html>

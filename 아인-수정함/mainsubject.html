@@ -89,33 +89,33 @@
         <div class="editor">
             <p>
                 <label class="star">*</label>
-                <select class="category">
+                <select class="category" id="categoryIdx">
                     <option>유머</option><option>사회</option><option>예민</option><option>전문가 제안</option>
                 </select>
-                <input class="editortitle" placeholder="주제">
+                <input class="editortitle" placeholder="주제" id="title">
             </p>
             
             <p>
                 <label class="star">*</label>
                 <div class="debate-Date">토론 기간</div>
-                <span><input class="date-Detail" placeholder="0000-00-00"></span>
+                <span><input id="endDate" class="date-Detail" placeholder="0000-00-00"></span>
             </p>
             <p>
                 <label class="star">*</label>
-                <input class="detail" placeholder="상세 설명을 입력해주세요"><br>
+                <input class="detail" placeholder="상세 설명을 입력해주세요" id="content"><br>
             </p>
             <div>
                 <label for="input-file">
                     <div class="Select-img">이미지 선택</div>
                 </label>
-                   <input type="file" id="input-file" name="file" accept="image/*">
+                   <input type="file" id="imgUrl" name="file" accept="image/*">
             </div>
             
             <p>
-                <input class="url-Linked" placeholder="URL 주소를 입력하세요">
+                <input id="url" class="url-Linked" placeholder="URL 주소를 입력하세요">
             </p>
             
-                <input type="button" id="debate-form-submit" onclick="" value="등록"/>    
+                <input type="button" id="debate-form-submit" value="등록" onclick="submitForm()"/>    
         </div>
     </form>
     <div class="bottom">

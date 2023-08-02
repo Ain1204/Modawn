@@ -87,13 +87,6 @@
     flex-direction: column;
 }
 
-.debateContent>img {
-    width: 378px;
-    height: 288px;
-    flex-shrink: 0;
-    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
-
-}
 
 .imgUrl {
     margin-bottom: 32px;
@@ -320,3 +313,15 @@
     line-height: 130%; /* 26px */
 }
 
+/*익이미지 가운데정렬이 왜 안될까..?*/
+.items {
+    align-items: center;
+    display: flex;
+}
+.items img{
+    width: 378px;
+    height: 288px;
+    flex-shrink: 0;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+
+}

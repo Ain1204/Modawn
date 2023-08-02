@@ -61,7 +61,7 @@
     border: none;
     margin-bottom: 30px;
    /*text*/
-    color: var(--text-unactive, #A0A0A0);
+    color: var(--text-unactive, #000000);
 
     /* B1_long */
     font-family: Noto Sans;
@@ -103,7 +103,7 @@
     margin-bottom: 30px;
     align-items: center;
    /*text*/
-    color: var(--text-unactive, #A0A0A0);
+   color: var(--text-unactive, #000000);
     /* B1_long */
     font-family: Noto Sans;
     font-size: 20px;
@@ -120,7 +120,8 @@
     border: none;
     border-radius: 20px;
     /*text*/
-    color: var(--text-unactive, #A0A0A0);
+    color: var(--text-unactive, #000000);
+
     /* B1_long */
     font-family: Noto Sans;
     font-size: 20px;
@@ -154,7 +155,7 @@
     cursor: pointer;
     
 }
-#input-file {
+#imgUrl {
     display: none;
 }
 
