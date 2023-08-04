@@ -55,3 +55,57 @@ fetch('http://43.200.164.174:3000/api/health-check')
     // 오류가 발생한 경우 오류 처리 로직을 작성합니다.
     console.error('오류 발생:', error);
   });
+
+//토론 목록 조회
+const apiUrl = "http://43.200.164.174:3000/api/discussion";
+
+const fetchData = async() => {
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    if(data.success) {
+      renderDebateList(data.data.rows);
+    } else {
+      console.error("API 요청 실패:", data.message);
+    }
+  } catch (error) {
+    console.error("API 요청 실패:", error);
+  }
+};
+
+const renderDebateList = (debateList) => {
+  const debateListElem = document.getElementById("debate-list");
+
+  debateListElem.innerHTML = "";
+
+  debateList.forEach((debate) => {
+    const {
+      idx,
+      categoryIdx,
+      userIdx,
+      title,
+      content,
+      status,
+      url,
+      imgUrl,
+      startDate,
+      endDate,
+      createdDate,
+      modifiedDate,
+      discusstion_category,
+      user,
+      discussionLikeCount,
+    } = debate;
+
+    const debateItemElem = document.querySelector(".textList");
+
+    if (status === "DISCUSS") {
+      debateItemElem.innerHTML = `<a href="/debate/${idx}">${title}</a> <span style = "color:#EC6565;">[진행중]</span>`;
+    } else if (status === "CLOSE") {
+      debateItemElem.innerHTML = `<a href="/debate/${idx}">${title}</a> <span style = "color:#AED977;>[종료]</span>`;
+    }
+  });
+};
+
+fetchData();
