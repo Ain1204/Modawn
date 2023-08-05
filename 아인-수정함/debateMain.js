@@ -73,29 +73,29 @@ const renderDebateList = (debateList) => {
 
     if (isDiscuss) {
       debateListElem.innerHTML += `
-        <a href="/debate/${debate.idx}">
-          <div id="debate-list" type="button">
+        <div id="debate-list" type="button">
+          <a href="/debate/${debate.idx}"> 
               <span class="textList">${debate.idx}</span>
               <span class="textList">${debate.title}</span>
               <span class="textList">${debate.user.nickname}</span>
               <span class="textList" id="ongoing">진행중</span>
               <span class="textList">${debate.createdDate}</span>
               <span class="textList">${debate.discussionLikeCount}</span>
-          </div>
-        </a>
+          </a>
+        </div>
       `;
     } else {
       debateListElem.innerHTML += `
-        <a href="/debate/${debate.idx}">
-          <div class="white-bg" type="button">
+        <div class="white-bg" type="button">
+          <a href="/debate/${debate.idx}">
               <span class="textList">${debate.idx}</span>
               <span class="textList">${debate.title}</span>
               <span class="textList">${debate.user.nickname}</span>
               <span class="textList">마감</span>
               <span class="textList">${debate.createdDate}</span>
               <span class="textList">${debate.discussionLikeCount}</span>
-          </div>
-        </a>
+          </a>
+        </div>
       `;
     }
   });
