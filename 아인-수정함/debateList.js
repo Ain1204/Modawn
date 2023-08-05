@@ -1,3 +1,12 @@
+// 토론 목록에서 항목을 클릭하는 이벤트 핸들러 추가
+const customListItems = document.querySelectorAll("debate-index");
+customListItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    // 클릭한 항목의 인덱스를 이용하여 getDiscussionInfo 함수 호출
+    getDiscussionInfo(index + 1); // 인덱스는 0부터 시작하므로, 1을 더해 실제 인덱스로 변환
+  });
+});
+
 async function getDiscussionInfo(discussionIdx) {
   const serverAddress = "http://43.200.164.174:3000";
   const apiEndpoint = `/api/discussion/${discussionIdx}`;
