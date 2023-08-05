@@ -1,13 +1,13 @@
-function submitForm() {
+async function submitForm() {
   const categoryIdx = document.getElementById("categoryIdx").selectedIndex + 1;
   const title = document.getElementById("title").value;
   const content = document.getElementById("content").value;
   const url = document.getElementById("url").value;
   const imgUrl = document.getElementById("imgUrl").value;
   const endDate = document.getElementById("endDate").value;
-  const userToken = "USER_TOKEN"; 
+  const userToken = localStorage.getItem('token');
 
-  createDiscussion(title, content, categoryIdx, url, imgUrl, endDate, userToken);
+  await createDiscussion(title, content, categoryIdx, url, imgUrl, endDate, userToken);
 }
 
 async function createDiscussion(title, content, categoryIdx, url = null, imgUrl = null, endDate, userToken) {
@@ -36,6 +36,7 @@ async function createDiscussion(title, content, categoryIdx, url = null, imgUrl 
 
       if (data.success) {
           console.log("토론이 등록되었습니다.");
+          window.location.href = "/debateList.html";
       } else {
           console.error("토론 등록에 실패했습니다:", data.message);
       }

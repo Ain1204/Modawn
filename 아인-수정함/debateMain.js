@@ -11,7 +11,11 @@ buttons.forEach((button) => {
 });
 
 // 페이지가 로드되면 실행되는 함수
-window.onload = function() {
+window.onload = async function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const page = urlParams.get('page');
+  const limit = 8;
+
   // 로그인된 토큰을 스토리지에서 가져옴
   const token = localStorage.getItem('token');
 
@@ -22,8 +26,10 @@ window.onload = function() {
     writeButton.disabled = false;
     writeButton.addEventListener('click', goToWritePage);
 
-    const nextBtn = document.getElementById("debate-list");
-    nextBtn.addEventListener("click", gotoDebateList);
+    // const nextBtn = document.getElementById("debate-list");
+    // nextBtn.addEventListener("click", gotoDebateList);
+
+    await fetchData(limit, (page - 1) * limit);
   } else {
     // 토큰이 없을 경우, login.html 페이지로 리다이렉트
     window.location.href = 'login.html';
@@ -40,32 +46,17 @@ function goToWritePage() {
   window.location.href = 'mainsubject.html';
 }
 
-fetch('http://43.200.164.174:3000/api/health-check')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    // 서버로부터 받은 데이터(data)를 처리하는 로직을 작성합니다.
-    console.log('서버 응답 데이터:', data);
-  })
-  .catch(error => {
-    // 오류가 발생한 경우 오류 처리 로직을 작성합니다.
-    console.error('오류 발생:', error);
-  });
-
 //토론 목록 조회
-const apiUrl = "http://43.200.164.174:3000/api/discussion";
+const apiUrl = `http://43.200.164.174:3000/api/discussion`;
 
-const fetchData = async() => {
+const fetchData = async(limit, offset) => {
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(`${apiUrl}?limit=${limit}&offset=${offset}`);
     const data = await response.json();
 
     if(data.success) {
       renderDebateList(data.data.rows);
+      renderDebateNextPage(data.data.count, limit, offset);
     } else {
       console.error("API 요청 실패:", data.message);
     }
@@ -75,37 +66,49 @@ const fetchData = async() => {
 };
 
 const renderDebateList = (debateList) => {
-  const debateListElem = document.getElementById("debate-list");
-
-  debateListElem.innerHTML = "";
+  const debateListElem = document.querySelector(".mainBlock");
 
   debateList.forEach((debate) => {
-    const {
-      idx,
-      categoryIdx,
-      userIdx,
-      title,
-      content,
-      status,
-      url,
-      imgUrl,
-      startDate,
-      endDate,
-      createdDate,
-      modifiedDate,
-      discusstion_category,
-      user,
-      discussionLikeCount,
-    } = debate;
+    const isDiscuss = debate.status === 'DISCUSS';
 
-    const debateItemElem = document.querySelector(".textList");
-
-    if (status === "DISCUSS") {
-      debateItemElem.innerHTML = `<a href="/debate/${idx}">${title}</a> <span style = "color:#EC6565;">[진행중]</span>`;
-    } else if (status === "CLOSE") {
-      debateItemElem.innerHTML = `<a href="/debate/${idx}">${title}</a> <span style = "color:#AED977;>[종료]</span>`;
+    if (isDiscuss) {
+      debateListElem.innerHTML += `
+        <a href="/debate/${debate.idx}">
+          <div id="debate-list" type="button">
+              <span class="textList">${debate.idx}</span>
+              <span class="textList">${debate.title}</span>
+              <span class="textList">${debate.user.nickname}</span>
+              <span class="textList" id="ongoing">진행중</span>
+              <span class="textList">${debate.createdDate}</span>
+              <span class="textList">${debate.discussionLikeCount}</span>
+          </div>
+        </a>
+      `;
+    } else {
+      debateListElem.innerHTML += `
+        <a href="/debate/${debate.idx}">
+          <div class="white-bg" type="button">
+              <span class="textList">${debate.idx}</span>
+              <span class="textList">${debate.title}</span>
+              <span class="textList">${debate.user.nickname}</span>
+              <span class="textList">마감</span>
+              <span class="textList">${debate.createdDate}</span>
+              <span class="textList">${debate.discussionLikeCount}</span>
+          </div>
+        </a>
+      `;
     }
   });
 };
 
-fetchData();
+const renderDebateNextPage = (count, limit, offset) => {
+  const pageListElem = document.querySelector(".pageList");
+
+  for (let page=0; page<count/limit; page++) {
+    pageListElem.innerHTML += `
+      <a href="/Main.html?page=${page+1}">
+        <span class=${offset === page * limit ? "nowPage" : ""}>${page+1}</span>
+      </a>
+    `;
+  }
+}
