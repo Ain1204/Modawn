@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modawn</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="debateMain.css">
     <link rel="stylesheet" href="opinionInput.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="bottom.css">
@@ -86,43 +86,42 @@
         <path d="M4 4H84" stroke="#3E66E8" stroke-width="8" stroke-linecap="round"/>
         </svg>
     
-
     <form method="POST" enctype="multipart/form-data">
         <div class="editor">
             <p>
                 <label class="star">*</label>
-                <select class="category">
+                <select id="type" class="category">
                     <option>찬성</option><option>반대</option><option>제 3의견</option>
                 </select>
-                <input class="editortitle" placeholder="한 줄 요약">
+                <input id="title" class="editortitle" placeholder="한 줄 요약">
             </p>
             
             <p>
                 <label class="star">*</label>
                 <div class="debate-Date">주장</div>
-                <span><input class="date-Detail" placeholder="주장을 입력하세요."></span>
+                <span><input id="assert" class="date-Detail" placeholder="주장을 입력하세요."></span>
             </p>
             <p>
                 <label class="star">*</label>
                 <div class="debate-Date">근거</div>
-                <span><input class="date-Detail" placeholder="근거를 입력하세요."></span>
+                <span><input id="reason" class="date-Detail" placeholder="근거를 입력하세요."></span>
             </p>
             <p>
                 <label class="star">*</label>
-                <input class="detail" placeholder="상세 설명을 입력해주세요"><br>
+                <input id="content" class="detail" placeholder="상세 설명을 입력해주세요"><br>
             </p>
             <div>
                 <label for="input-file">
                     <div class="Select-img">이미지 선택</div>
                 </label>
-                   <input type="file" id="input-file" name="file" accept="image/*">
+                   <input type="file" id="imgUrl" name="file" accept="image/*">
             </div>
             
             <p>
-                <input class="url-Linked" placeholder="URL 주소를 입력하세요">
+                <input id="url" class="url-Linked" placeholder="URL 주소를 입력하세요">
             </p>
             
-                <input type="button" id="debate-form-submit" onclick="" value="등록"/>    
+                <input type="button" id="debate-form-submit" onclick="submitForm()" value="등록"/>    
         </div>
     </form>
     <div class="bottom">
@@ -133,7 +132,7 @@
         <span>개인정보 처리 방침</span> 
         <span>© 2023. MO:DAWN Co. all rights reserved</span>
     </div>
-    <script src="subject.js"></script>
+    <script src="opinionInput.js"></script>
     <script src="header.js"></script>
 
 
