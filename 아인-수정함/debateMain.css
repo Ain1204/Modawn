@@ -115,6 +115,14 @@
     padding: 0 2%;
 }
 
+.white-bg>a {
+    width: 1194px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Noto Sans;
+    color: var(--text-main, #232527);
+}
+
 .writeBtn {
     display: flex;
     justify-content: flex-end;
