@@ -155,10 +155,9 @@
     gap: 16px;
 }
 
+
 .nowPage {
-    display: flex;
     padding: 4px 8px;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -172,10 +171,8 @@
     line-height: 100%;
 }
 
-.nextPage>span {
-    display: flex;
+div.nextPage > div.pageList > a > span {
     padding: 4px 8px;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
