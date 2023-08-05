@@ -1,5 +1,5 @@
 async function getDiscussionInfo(discussionIdx) {
-  const serverAddress = "http://0.0.0.0:3000";
+  const serverAddress = "http://43.200.164.174:3000";
   const apiEndpoint = `/api/discussion/${discussionIdx}`;
   const userToken = localStorage.getItem('token');  
 
@@ -28,3 +28,4 @@ async function getDiscussionInfo(discussionIdx) {
     console.error("토론 정보를 가져오는 중 오류가 발생했습니다:", error);
   }
 }
+getDiscussionInfo(1);
