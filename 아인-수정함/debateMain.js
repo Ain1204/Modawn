@@ -74,7 +74,7 @@ const renderDebateList = (debateList) => {
     if (isDiscuss) {
       debateListElem.innerHTML += `
         <div id="debate-list" type="button">
-          <a href="/debate/${debate.idx}"> 
+          <a href="/debateList.html?debate=${debate.idx}"> 
               <span class="textList">${debate.idx}</span>
               <span class="textList">${debate.title}</span>
               <span class="textList">${debate.user.nickname}</span>
@@ -87,7 +87,7 @@ const renderDebateList = (debateList) => {
     } else {
       debateListElem.innerHTML += `
         <div class="white-bg" type="button">
-          <a href="/debate/${debate.idx}">
+          <a href="/debateList.html?debate=${debate.idx}">
               <span class="textList">${debate.idx}</span>
               <span class="textList">${debate.title}</span>
               <span class="textList">${debate.user.nickname}</span>

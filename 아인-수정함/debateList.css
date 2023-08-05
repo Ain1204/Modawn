@@ -93,7 +93,7 @@
     flex-shrink: 0;
 }
 
-.imgUrl {
+.url {
     display: flex;
     width: 241px;
     height: 20px;
@@ -104,7 +104,7 @@
     background: var(--gray-white, #FFF);
 }
 
-.imgUrl>p {
+.url>p {
     width: 742px;
     flex-shrink: 0;
     color: var(--text-main, #232527);
@@ -116,7 +116,7 @@
     text-decoration-line: underline;
 }
 
-.url {
+.content {
     display: flex;
     width: 241px;
     height: 24px;
@@ -127,7 +127,7 @@
     background: var(--gray-white, #FFF);
 }
 
-.url>p {
+.content>p {
     color: var(--text-main, #232527);
     font-family: Noto Sans;
     font-size: 20px;
