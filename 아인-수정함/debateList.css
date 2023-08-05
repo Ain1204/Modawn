@@ -116,7 +116,7 @@
     text-decoration-line: underline;
 }
 
-.imgDetail {
+.url {
     display: flex;
     width: 241px;
     height: 24px;
@@ -127,7 +127,7 @@
     background: var(--gray-white, #FFF);
 }
 
-.imgDetail>p {
+.url>p {
     color: var(--text-main, #232527);
     font-family: Noto Sans;
     font-size: 20px;

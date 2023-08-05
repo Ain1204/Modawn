@@ -36,7 +36,7 @@ async function createDiscussion(title, content, categoryIdx, url = null, imgUrl 
 
       if (data.success) {
           console.log("토론이 등록되었습니다.");
-          window.location.href = "/debateList.html";
+          window.location.href = "/Main.html";
       } else {
           console.error("토론 등록에 실패했습니다:", data.message);
       }
