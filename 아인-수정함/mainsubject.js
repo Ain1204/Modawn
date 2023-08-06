@@ -1,18 +1,19 @@
+const serverAddress = "http://43.200.164.174:3000";
+const userToken = localStorage.getItem('token');
+let imgUrl = null;
+
 async function submitForm() {
   const categoryIdx = document.getElementById("categoryIdx").selectedIndex + 1;
   const title = document.getElementById("title").value;
   const content = document.getElementById("content").value;
   const url = document.getElementById("url").value;
-  const imgUrl = document.getElementById("imgUrl").value;
   const endDate = document.getElementById("endDate").value;
-  const userToken = localStorage.getItem('token');
 
   await createDiscussion(title, content, categoryIdx, url, imgUrl, endDate, userToken);
 }
 
 async function createDiscussion(title, content, categoryIdx, url = null, imgUrl = null, endDate, userToken) {
   try {
-      const serverAddress = "http://43.200.164.174:3000";
       const apiEndpoint = "/api/discussion";
 
       // 서버에 토론 등록 요청을 보냅니다.
@@ -43,5 +44,34 @@ async function createDiscussion(title, content, categoryIdx, url = null, imgUrl 
   } catch (error) {
       console.error("토론 등록 중 오류가 발생했습니다:", error);
   
+  }
 }
+
+async function loadFile(input) {
+    const file = input.files[0];
+
+    try {
+        const apiEndpoint = `/api/storage`;
+
+        const formData = new FormData();
+        formData.append('file', file);
+
+        const response = await fetch(`${serverAddress}${apiEndpoint}`, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${userToken}`
+            },
+            body: formData
+        });
+
+        const responseData = await response.json();
+
+        if (!responseData.success) {
+            throw new Error(responseData);
+        }
+
+        imgUrl = responseData.data.url;
+    } catch (e) {
+        console.error("파일 업로드에 실패했습니다:", e);
+    }
 }

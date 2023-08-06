@@ -104,13 +104,15 @@
                 <label class="star">*</label>
                 <input class="detail" placeholder="상세 설명을 입력해주세요" id="content"><br>
             </p>
-            <div>
-                <label for="input-file">
-                    <div class="Select-img">이미지 선택</div>
-                </label>
-                   <input type="file" id="imgUrl" name="file" accept="image/*">
-            </div>
-            
+            <form method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="chooseFile">
+                        <div class="Select-img">이미지 선택</div>
+                    </label>
+                    <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+                </div>
+            </form>
+
             <p>
                 <input id="url" class="url-Linked" placeholder="URL 주소를 입력하세요">
             </p>
