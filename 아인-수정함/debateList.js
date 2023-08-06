@@ -1,8 +1,9 @@
+const serverAddress = "http://43.200.164.174:3000";
+const userToken = localStorage.getItem('token');
+let debateIdx;
 
 async function getUserInfo() {
-  const serverAddress = "http://43.200.164.174:3000";
   const apiEndpoint = `/api/user`;
-  const userToken = localStorage.getItem('token');
 
   try {
     const response = await fetch(`${serverAddress}${apiEndpoint}`, {
@@ -26,9 +27,7 @@ async function getUserInfo() {
 }
 
 async function getDiscussionInfo(discussionIdx) {
-  const serverAddress = "http://43.200.164.174:3000";
   const apiEndpoint = `/api/discussion/${discussionIdx}`;
-  const userToken = localStorage.getItem('token');
 
   try {
     const userInfo = await getUserInfo();
@@ -50,7 +49,6 @@ async function getDiscussionInfo(discussionIdx) {
 
     fillDebateInfo(debateInfo, userInfo);
     fillOpinionInfo(debateInfo.discussion.opinionApproves, debateInfo.discussion.opinionDisapproves, debateInfo.discussion.opinionOthers);
-
   } catch (error) {
     console.error("토론 정보를 가져오는 중 오류가 발생했습니다:", error);
   }
@@ -98,6 +96,12 @@ function fillDebateInfo(debateInfo, userInfo) {
 
   const sympathyCountElement = document.querySelector("div.sympathyBtn > div > p");
   sympathyCountElement.textContent = debateInfo.discussionLikeCount;
+
+  sessionStorage.setItem('isLike', debateInfo.userDiscussionLike);
+
+  if (debateInfo.userDiscussionLike) {
+    toggleRedHeart();
+  }
 }
 
 function fillOpinionInfo(approves, disapproves, others) {
@@ -124,8 +128,56 @@ function fillOpinionInfo(approves, disapproves, others) {
   });
 }
 
+async function likeBtnClickHandler() {
+  const countElem = document.querySelector('div.sympathyBtn > div.btnWrapper > p');
+
+  if (sessionStorage.getItem('isLike') === 'true') {
+    sessionStorage.setItem('isLike', false);
+    countElem.innerHTML = parseInt(countElem.innerHTML) - 1;
+    toggleWhiteHeart();
+  } else {
+    sessionStorage.setItem('isLike', true);
+    countElem.innerHTML = parseInt(countElem.innerHTML) + 1;
+    toggleRedHeart();
+  }
+
+  try {
+    const apiEndpoint = `/api/discussion/${debateIdx}/like`;
+    const response = await fetch(`${serverAddress}${apiEndpoint}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${userToken}`,
+      },
+    });
+
+    const responseData = await response.json();
+    if (!responseData.success) {
+      throw new Error(responseData);
+    }
+  } catch (e) {
+    console.error("좋아요를 누르는 중 오류가 발생했습니다:", e);
+  }
+}
+
+function toggleRedHeart() {
+  const likeBtnWrapper = document.querySelector(".btnWrapper");
+  likeBtnWrapper.classList.add("heartRed");
+
+  const btnPath = document.querySelector(".path");
+  btnPath.setAttribute("fill", "#EB6962");
+}
+
+function toggleWhiteHeart() {
+  const likeBtnWrapper = document.querySelector(".btnWrapper");
+  likeBtnWrapper.classList.remove("heartRed");
+
+  const btnPath = document.querySelector(".path");
+  btnPath.setAttribute("fill", "#A0A0A0");
+}
+
 (() => {
   const urlParams = new URLSearchParams(window.location.search);
-  const debate = urlParams.get('debate');
-  getDiscussionInfo(debate);
+  debateIdx = urlParams.get('debate');
+  getDiscussionInfo(debateIdx);
 })();
