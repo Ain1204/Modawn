@@ -59,7 +59,7 @@ const renderOpinionList = (opinionList) => {
     opinionList.forEach((opinion) => {
         opinionListElem.innerHTML += `
             <div class="white-bg">
-                <a href="debateComp.html?opinion=${opinion.idx}">
+                <a href="debateComp.html?discussionIdx=${discussionIdx}&opinion=${opinion.idx}">
                     <span class="textList">${opinion.idx}</span>
                     <span class="textList">${opinion.title}</span>
                     <span class="textList">${opinion.user.nickname}</span>
