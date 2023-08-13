@@ -49,6 +49,7 @@ async function getDiscussionInfo(discussionIdx) {
 
     fillDebateInfo(debateInfo, userInfo);
     fillOpinionInfo(debateInfo.discussion.opinionApproves, debateInfo.discussion.opinionDisapproves, debateInfo.discussion.opinionOthers);
+    fillOpinionLinkInfo(debateInfo.discussion.idx);
   } catch (error) {
     console.error("토론 정보를 가져오는 중 오류가 발생했습니다:", error);
   }
@@ -109,8 +110,8 @@ function fillOpinionInfo(approves, disapproves, others) {
   const approvesSympathyElem = document.querySelector("div.opinion.approve > div.op > span.sympathy");
   const disapprovesDetailElem = document.querySelector("div.opinion.disapprove > div.op > span.opinionDetail");
   const disapprovesSympathyElem = document.querySelector("div.opinion.disapprove > div.op > span.sympathy");
-  const othersDetailElem = document.querySelector("div.opinion.other > div.op > span.opinionDetail");
-  const othersSympathyElem = document.querySelector("div.opinion.other > div.op > span.sympathy");
+  const othersDetailElem = document.querySelector("div.opinion.others > div.op > span.opinionDetail");
+  const othersSympathyElem = document.querySelector("div.opinion.others > div.op > span.sympathy");
 
   approves.forEach((item) => {
     approvesDetailElem.innerHTML += `<p>${item.title}</p>`;
@@ -126,6 +127,16 @@ function fillOpinionInfo(approves, disapproves, others) {
     othersDetailElem.innerHTML += `<p>${item.title}</p>`;
     othersSympathyElem.innerHTML += `<p>좋아요 ${item.likeCount}</p>`;
   });
+}
+
+function fillOpinionLinkInfo(debateIdx) {
+  const approveLinkElem = document.querySelector('div.debWrapper > div.opinion.approve > div.opinionBtn > button:nth-child(1)');
+  const disapproveLinkElem = document.querySelector('div.debWrapper > div.opinion.disapprove > div.opinionBtn > button:nth-child(1)');
+  const othersLinkElem = document.querySelector('div.debWrapper > div.opinion.others > div.opinionBtn > button:nth-child(1)');
+
+  approveLinkElem.innerHTML = `<a href="debate_agree.html?discussionIdx=${debateIdx}&type=APPROVE&page=1">더보기</a>`;
+  disapproveLinkElem.innerHTML = `<a href="debate_disagree.html?discussionIdx=${debateIdx}&type=DISAPPROVE&page=1">더보기</a>`;
+  othersLinkElem.innerHTML = `<a href="otherOpinion.html?discussionIdx=${debateIdx}&type=OTHER&page=1">더보기</a>`;
 }
 
 async function likeBtnClickHandler() {
